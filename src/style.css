@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --green-lighter: #dff1e7;
+  --green-medium: #0c7d69;
+  --error-color: #d73c3c;
+  --white: #ffffff;
+  --grey-medium: #87a3a6;
+  --grey-darker: #2b4246;
+}
+body {
+  font-family: "karla", sans-serif;
+  padding: 25px 15px;
+}
+.star {
+  color: var(--green-medium);
+}
+.f-16 {
+  font-size: 16px;
+}
+.container .name > div {
+  width: 48%;
+}
+.container .name > div input {
+  border: 1px solid var(--grey-medium);
+  padding: 10px 10px 10px 15px;
+  transition: border 0.3s;
+}
+.container .name > div input:hover {
+  border: 1px solid var(--green-medium);
+}
+.mail input {
+  padding: 10px 10px 10px 15px;
+  border: 1px solid var(--grey-medium);
+}
+.type .button > div {
+  border: 1px solid var(--grey-medium);
+  padding: 12px 25px 12px 15px;
+  width: 48%;
+}
+.custom-button input[type="radio"]:checked {
+  border: 2px solid var(--green-medium);
+}
+.custom-button input[type="radio"]:checked + .radio-btn {
+  border: 2px solid var(--green-medium);
+}
+.radio-btn:after {
+  transform: translate(-50%, -50%);
+}
+.radio-btn {
+  border-color: var(--grey-medium);
+  width: 20px;
+  height: 20px;
+}
+.custom-button input[type="radio"]:checked + .radio-btn::after {
+  opacity: 1;
+  width: 12px;
+  height: 12px;
+}
+textarea {
+  border-color: var(--grey-medium);
+  padding: 15px;
+}
+.type .button > div:has(input[type="radio"]:checked) {
+  background-color: var(--green-lighter);
+}
+.custom-button label {
+  font-size: 17px;
+}
+.custom-checkbox input:checked + .checkmark {
+  background-color: var(--green-medium); /* Change this color as needed */
+}
+.custom-checkbox .checkmark::after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+}
+.custom-checkbox input:checked + .checkmark::after {
+  display: block;
+}
+.checkmark {
+  border: 1px solid var(--grey-medium);
+}
+input[type="text"]:hover,
+textarea:hover {
+  border: 1px solid var(--green-medium);
+}
+.success {
+  transform: translateX(-50%);
+}
+button {
+  padding: 10px 260px 10px;
+}
+@media (max-width: 768px) {
+  button {
+    padding: 15px;
+  }
+  .type .button > div {
+    width: 100%;
+  }
+  .container .name > div {
+    width: 100%;
+  }
+}

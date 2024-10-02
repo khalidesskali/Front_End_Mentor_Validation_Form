@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Contact form</title>
+    <!-- Css linkin file  -->
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="min-h-screen grid place-content-center bg-glighter">
+    <div class="container mx-auto bg-white p-10 rounded-2xl">
+      <h1 class="font-bold text-greydarker text-3xl mb-6">Contact Us</h1>
+      <form method="get">
+        <div
+          class="name flex items-center gap-5 mb-5 max-md:flex-col max-md:items-start"
+        >
+          <div class="first-name flex flex-col max-md:w-full">
+            <label class="text-normal text-greydarker block mb-[10px]"
+              >First Name <span class="star">*</span></label
+            >
+            <input type="text" class="rounded-lg focus:outline-none" />
+            <span class="error f-15 text-error hidden mt-3 text-base text-bold"
+              >This field is required</span
+            >
+          </div>
+
+          <div class="last-name flex flex-col max-md:w-full">
+            <label class="text-normal text-greydarker block mb-[10px]"
+              >Last Name <span class="star">*</span></label
+            >
+            <input type="text" class="rounded-lg focus:outline-none" />
+            <span class="error f-15 text-error hidden mt-3 text-base text-bold"
+              >This field is required</span
+            >
+          </div>
+        </div>
+        <div class="mail mb-5">
+          <label class="ext-normal text-greydarker block mb-[10px]"
+            >Email Address <span class="star">*</span></label
+          >
+          <input
+            type="text"
+            class="w-full border-greymedium rounded-lg p-4 focus:outline-none"
+          />
+          <span class="error f-15 text-error hidden mt-3 text-base text-bold"
+            >Please enter a valid email address</span
+          >
+        </div>
+        <div class="type mb-5">
+          <label class="ext-normal text-greydarker block mb-[10px]"
+            >Query type <span class="star">*</span></label
+          >
+          <div class="button flex flex-wrap items-center w-full gap-5">
+            <div class="general rounded-lg cursor-pointer max-md:w-full">
+              <label
+                class="custom-button cursor-pointer flex items-center gap-3"
+              >
+                <input type="radio" name="query" id="query" class="hidden" />
+                <span
+                  class="radio-btn border rounded-full relative after:content-[''] after:duration-300 after:absolute after:top-1/2 after:left-1/2 after:bg-gmedium after:rounded-full after:opacity-0 after:w-4 after:h-4"
+                ></span>
+                <label
+                  for="query"
+                  class="cursor-pointer font-normal text-greydarker"
+                  >General Enquiry</label
+                >
+              </label>
+            </div>
+            <div class="support rounded-lg cursor-pointer max-md:w-full">
+              <label
+                class="custom-button flex items-center cursor-pointer gap-3"
+              >
+                <input type="radio" name="query" id="supp" class="hidden" />
+                <span
+                  class="radio-btn border rounded-full relative after:content-[''] after:duration-300 after:absolute after:top-1/2 after:left-1/2 after:bg-gmedium after:rounded-full after:opacity-0 after:w-4 after:h-4"
+                ></span>
+                <label
+                  for="supp"
+                  class="font-normal cursor-pointer text-greydarker"
+                  >Support Request</label
+                >
+              </label>
+            </div>
+          </div>
+        </div>
+        <span class="error f-15 text-error hidden mb-3 text-base"
+          >Please select a query type</span
+        >
+        <div class="message mb-5">
+          <label for="" class="ext-normal text-greydarker block mb-[10px] f-16"
+            >Message <span class="star">*</span></label
+          >
+          <textarea
+            class="resize-none focus:outline-none w-full h-28 border rounded-lg max-md:h-40"
+          ></textarea>
+          <span class="error f-15 text-error hidden mt-3 text-base"
+            >This field is required</span
+          >
+        </div>
+        <div class="contact mb-3 flex items-start gap-5">
+          <label class="custom-checkbox relative h-4 w-4 cursor-pointer">
+            <input type="checkbox" id="cont" class="w-0 h-0 opacity-0" />
+            <span
+              class="checkmark absolute top-0 left-0 w-5 h-5 border duration-300 after:content-[''] after:absolute after:hidden after:rotate-45"
+            ></span>
+          </label>
+          <label for="cont" class="greydarker cursor-pointer"
+            >I consent to being contacted by the team
+            <span class="star">*</span></label
+          >
+        </div>
+        <span class="error f-15 text-error hidden mb-2 text-base"
+          >To submit this form please, consent to being contacted</span
+        >
+        <button
+          class="bg-gmedium w-full rounded-lg text-white font-normal duration-300 hover:bg-greydarker"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+    <div
+      class="success p-5 bg-greydarker text-white rounded-lg absolute left-1/2 hidden"
+    >
+      <div
+        class="sent flex items-center gap-3 mb-2 flex-wrap max-md:flex-col max-md:items-center"
+      >
+        <img
+          src="./contact-form-main/assets/images/icon-success-check.svg"
+          alt=""
+        />
+        <span class="font-bold text-lg">Message Sent!</span>
+      </div>
+      <p class="font-normal text-greymedium max-md:text-center">
+        Thank you for completing the form. We'll be in touch soon
+      </p>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
